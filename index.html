@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ouya Sphere</title>
+  <meta name="description" content="Unternehmensberatung, Strategie & Operations – Consulting mit messbaren Ergebnissen." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ouya Sphere" />
+  <meta property="og:description" content="Management Consulting • Strategy • Operations" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <div id="progress"></div>
+
+  <header id="topbar">
+    <div class="container nav">
+      <a href="#home" class="logo" aria-label="Startseite">
+        <img src="logo.png" alt="Ouya Sphere – Logo" loading="eager" />
+      </a>
+      <nav class="links" aria-label="Main navigation">
+        <button class="hamburger" id="menu-toggle" aria-label="Menü" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <a class="nav-link" href="#home" data-i18n="nav.home">Start</a>
+        <a class="nav-link" href="#services" data-i18n="nav.services">Leistungen</a>
+        <a class="nav-link" href="#about" data-i18n="nav.about">Über uns</a>
+        <a class="nav-link" href="#contact" data-i18n="nav.contact">Kontakt</a>
+        <div class="indicator" id="indicator"></div>
+
+        <div class="lang-dropdown" id="lang-dropdown">
+          <button class="lang-toggle" id="lang-toggle" aria-label="Sprache auswählen">
+            <span id="current-flag"></span>
+          </button>
+          <div class="dropdown-content" id="lang-dropdown-content">
+            <a href="#" data-lang="de" class="lang-option">
+              <span class="flag-icon flag-icon-de"></span> DE
+            </a>
+            <a href="#" data-lang="en" class="lang-option">
+              <span class="flag-icon flag-icon-gb"></span> EN
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="menu-backdrop" id="menu-backdrop"></div>
+  <nav id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <ul>
+      <li><a href="#home" data-i18n="nav.home">Start</a></li>
+      <li><a href="#services" data-i18n="nav.services">Leistungen</a></li>
+      <li><a href="#about" data-i18n="nav.about">Über uns</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <main id="home">
+    <!-- HERO: 2-Spalten Consulting Layout + Bildplatzhalter -->
+    <section class="section hero" id="home-section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker" data-i18n="hero.kicker">
+            Unternehmensberatung • Strategy • Operations
+          </p>
+          <h1 class="hero-title" data-i18n="hero.title">
+            Beratung, die Ergebnisse liefert.
+          </h1>
+          <p class="subtle" data-i18n="hero.lead">
+            Ouya Sphere unterstützt Unternehmen dabei, schneller besser zu werden – 
+            in Strategie, Vertrieb, Transaktionen sowie Prozess- und Organisations­optimierung. 
+            Mit langjähriger Industrieerfahrung, datengetriebenen Analysen und einem klaren 
+            Fokus auf Umsetzung.
+          </p>
+          <div style="display:flex;gap:.6rem;margin-top:1rem;flex-wrap:wrap">
+            <a class="btn primary" href="#contact" data-i18n="hero.cta">
+              Gespräch vereinbaren
+            </a>
+            <a class="btn" href="#services" data-i18n="hero.seeServices">
+              Leistungen ansehen
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <img src="consult.png" alt="Strategieworkshop mit Management-Team" class="hero-image" loading="lazy" />
+        </div>
+     </div>
+          
+
+      <!-- Drei kurze Value-Props unter dem Hero -->
+      <div class="container">
+        <div class="hero-features">
+          <div class="feature-item">
+            <div class="icon">
+              <!-- optional kleines Icon -->
+            </div>
+            <h4 data-i18n="hero.feature1.title">Messbare Wirkung</h4>
+            <p class="subtle" data-i18n="hero.feature1.text">
+              Fokus auf klaren KPIs, Umsetzungs­roadmaps und schnellen Ergebnissen.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="icon"></div>
+            <h4 data-i18n="hero.feature2.title">Industrieerfahrung</h4>
+            <p class="subtle" data-i18n="hero.feature2.text">
+              Tiefe Expertise in Automotive, Industrie und Supply Chain.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="icon"></div>
+            <h4 data-i18n="hero.feature3.title">Hands-on Ansatz</h4>
+            <p class="subtle" data-i18n="hero.feature3.text">
+              Wir begleiten nicht nur auf PowerPoint – sondern bis in die Umsetzung.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES: Klar strukturierte Practice Areas -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title gradient-text" data-i18n="services.title">
+          Leistungen
+        </h2>
+        <p class="subtle" data-i18n="services.lead">
+          Ouya Sphere deckt den gesamten Wertstrom von Strategie bis Umsetzung ab – 
+          mit modularen Beratungsbausteinen, die sich auf Ihr Geschäftsmodell zuschneiden lassen.
+        </p>
+
+        <div class="grid-4" style="margin-top:14px">
+          <div class="card">
+            <div class="icon-badge">
+              <span class="icon" data-src="icons/strategy.png" aria-hidden="true"></span>
+            </div>
+            <h3 data-i18n="services.strategy.title">Business & Growth Strategy</h3>
+            <p data-i18n="services.strategy.text">
+              Entwicklung klarer Wachstumsstrategien, Markt- & Wettbewerbsanalysen 
+              sowie belastbarer Geschäftsmodelle.
+              <br />
+              Methoden: PESTEL, Porters Five Forces, Ansoff-Matrix, BCG-Portfolio.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon-badge">
+              <span class="icon" data-src="icons/sales.png" aria-hidden="true"></span>
+            </div>
+            <h3 data-i18n="services.ops.title">Sales & Distribution Excellence</h3>
+            <p data-i18n="services.ops.text">
+              Optimierung von Vertriebskanälen, Pricing, Konditionssystemen 
+              und Partnernetzwerken – mit Fokus auf Skalierung und Profitabilität.
+              <br />
+              Methoden: CRM-Best Practices (CLV, Lead-Scoring), 
+              Preisforschung (Conjoint, Van-Westendorp), Pocket-Price-Waterfall.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon-badge">
+              <span class="icon" data-src="icons/handshake.png" aria-hidden="true"></span>
+            </div>
+            <h3 data-i18n="services.digital.title">M&A Advisory & Due Diligence</h3>
+            <p data-i18n="services.digital.text">
+              Unterstützung entlang des gesamten Deal-Cycles – von Target-Screening 
+              über Commercial & Operational Due Diligence bis Post-Merger-Integration.
+              <br />
+              Methoden: Quality of Earnings, Net-Working-Capital-Analysen, 
+              OEE- & Bottleneck-Analysen im Operations-Umfeld.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon-badge">
+              <span class="icon" data-src="icons/restructuring.png" aria-hidden="true"></span>
+            </div>
+            <h3 data-i18n="services.process.title">Process Optimization & Operating Model</h3>
+            <p data-i18n="services.process.text">
+              End-to-End-Optimierung in Operations, Supply Chain und Vertrieb – 
+              inklusive Target Operating Model und Governance.
+              <br />
+              Methoden: Wertstromanalyse, Lean-Tools (5S, Kaizen, Kanban), 
+              KPI-basierte Performance-Steuerung.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      
+
+       <!-- ABOUT: nur noch Counter / Kennzahlen -->
+    <section id="about" class="section">
+      <div class="container">
+           <!-- Neuer Über-uns-Infoblock -->
+        <div class="card" style="margin-bottom: 24px;">
+          <h2 class="section-title" data-i18n="about.heading">Über uns</h2>
+          <p class="subtle" data-i18n="about.intro">
+            Mit über 25&nbsp;Jahren Branchenerfahrung begleiten wir bereits mehrere 
+            internationale Kunden im Automotive- und Maschinenbausektor – von der 
+            strategischen Ausrichtung bis zur operativen Umsetzung. 
+            Ouya Sphere verbindet OEM- und Tier-1-Perspektive mit pragmatischer 
+            Beratung, um messbare Ergebnisse entlang der gesamten Wertschöpfungskette zu erzielen.
+          </p>
+        </div>
+        <div class="metrics" id="metrics" style="margin-top:0;border-radius:var(--radius);padding:clamp(22px,4.5vw,36px);background:#eef5fb;color:#132042">
+          <p class="kicker" data-i18n="metrics.kicker" style="color:#314572">MANDATE WELTWEIT</p>
+          <h2 class="section-title metrics-title" data-i18n="metrics.title">Ouya Sphere in Zahlen</h2>
+          <div class="grid-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px">
+            <div class="item" style="text-align:center">
+              <div class="number" data-target="3">3</div>
+              <div class="label" data-i18n="metrics.clients">Mandanten weltweit</div>
+            </div>
+            <div class="item" style="text-align:center">
+              <div class="number" data-target="30" data-suffix="+">30+</div>
+              <div class="label" data-i18n="metrics.projects">Internationale Projekte</div>
+            </div>
+            <div class="item" style="text-align:center">
+              <div class="number" data-target="10" data-suffix="">10</div>
+              <div class="label" data-i18n="metrics.partners">Globale Kooperationspartner</div>
+            </div>
+            <div class="item" style="text-align:center">
+              <div class="number" data-target="25" data-suffix="+">25+</div>
+              <div class="label" data-i18n="metrics.experts">Jahre Branchen­erfahrung</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title gradient-text" data-i18n="contact.title">
+          Kontakt aufnehmen
+        </h2>
+        <p class="subtle" data-i18n="contact.lead">
+          Sie möchten ein konkretes Projekt, ein mögliches Mandat oder eine Sparrings-Runde besprechen? 
+          Schreiben Sie uns kurz Ihr Anliegen – wir melden uns zeitnah mit einem Terminvorschlag.
+        </p>
+
+        <form id="contact-form" method="post" action="contact.php">
+          <div class="field">
+            <label for="name" data-i18n="form.name">Name *</label>
+            <input class="input" id="name" name="name" required placeholder="Vor- und Nachname" data-i18n-placeholder="form.placeholder.name"/>
+          </div>
+          <div class="field">
+            <label for="email" data-i18n="form.email">E-Mail *</label>
+            <input class="input" id="email" name="email" type="email" required placeholder="name@unternehmen.de" data-i18n-placeholder="form.placeholder.email"/>
+          </div>
+          <div class="field">
+            <label for="company" data-i18n="form.company">Firma</label>
+            <input class="input" id="company" name="company" placeholder="Unternehmen (optional)" data-i18n-placeholder="form.placeholder.company"/>
+          </div>
+          <div class="field">
+            <label for="message" data-i18n="form.message">Ihr Anliegen *</label>
+            <textarea id="message" class="input" name="message" rows="5" required placeholder="Wie können wir helfen?" data-i18n-placeholder="form.placeholder.message"></textarea>
+          </div>
+          <div style="display:flex; gap:.6rem; align-items:center; flex-wrap:wrap;">
+              
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LcnVScsAAAAAM7yx68T2W8_jcCg0MRlUKE8udps"
+           ></div>
+            <button class="btn primary" type="submit" data-i18n="form.send">Nachricht senden</button>
+            <a class="btn" href="#" id="mailto-btn" data-i18n="form.mailto">Per E-Mail öffnen</a>
+            <span id="form-status" class="subtle"></span>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER bleibt wie gehabt -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container footer-top-grid">
+        <div class="footer-col">
+          <h4 data-i18n="footer.contact.title">Kontakt</h4>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <span class="icon" data-src="icons/mail.png" aria-hidden="true"></span>
+              <div><a href="mailto:info@ouya-sphere.de">info@ouya-sphere.de</a></div>
+            </div>
+            <div class="contact-item">
+              <span class="icon" data-src="icons/phone.png" aria-hidden="true"></span>
+              <div><a href="tel:+4984583886099">+49 8458 3886099</a></div>
+            </div>
+            <div class="contact-item">
+              <span class="icon" data-src="icons/map.png" aria-hidden="true"></span>
+              <div><address>Beethovenstr. 19, 85080 Gaimersheim, Deutschland</address></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.links.title">Weiterführende Links</h4>
+          <div class="social-links">
+            <a class="social" href="https://www.linkedin.com/company/ouya-sphere" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <span class="icon" data-src="icons/linkedin.svg" data-w="16" data-h="16" aria-hidden="true"></span>
+              <span>LinkedIn</span>
+            </a>
+            <a class="social" href="https://www.instagram.com/ouyasphere" target="_blank" rel="noopener" aria-label="Instagram">
+              <span class="icon" data-src="icons/instagram.svg" data-w="16" data-h="16" aria-hidden="true"></span>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.keywords.title">Keywords</h4>
+          <ul class="keyword-tags">
+            <li>Management Consulting</li>
+            <li>Strategy</li>
+            <li>Operations</li>
+            <li>Supply Chain</li>
+            <li>Sales & Distribution</li>
+            <li>Pricing</li>
+            <li>CRM</li>
+            <li>M&A Advisory</li>
+            <li>Due Diligence</li>
+            <li>Restructuring</li>
+            <li>Succession</li>
+            <li>Operating Model</li>
+            <li>Process Optimization</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-row">
+        <div class="copyright">
+          © <span id="year"></span> Ouya Sphere
+        </div>
+        <nav class="legal-links" aria-label="Rechtliches">
+          <a href="/impressum.html" data-i18n="footer.legal.imprint">Impressum</a>
+          <a href="/datenschutz.html" data-i18n="footer.legal.privacy">Datenschutzhinweise</a>
+          <a href="/cookies.html" data-i18n="footer.legal.cookies">Cookie-Richtlinien</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-backdrop" id="cookie-backdrop"></div>
+  <div class="cookie" id="cookie" role="dialog" aria-modal="true" aria-labelledby="ck-title">
+    <h3 id="ck-title" data-i18n="cookie.title">Cookies & Datenschutz</h3>
+    <p data-i18n="cookie.desc">
+      Wir verwenden Cookies, um unsere Website sicher zu betreiben und – mit Ihrer Einwilligung – zur Reichweitenmessung.
+      Sie können Ihre Auswahl jederzeit ändern.
+    </p>
+    <div class="options">
+      <div class="opt">
+        <div>
+          <strong data-i18n="cookie.necessary">Technisch erforderlich</strong>
+          <div class="subtle" data-i18n="cookie.necessarySub">
+            immer aktiv – z. B. Sicherheits- und Session-Cookies
+          </div>
+        </div>
+        <input type="checkbox" checked disabled />
+      </div>
+      <div class="opt">
+        <div>
+          <strong data-i18n="cookie.analytics">Analytics</strong>
+          <div class="subtle" data-i18n="cookie.analyticsSub">
+            anonyme Nutzungsstatistiken (optional)
+          </div>
+        </div>
+        <input id="ck-analytics" type="checkbox" />
+      </div>
+    </div>
+    <div style="display:flex; gap:.5rem; justify-content:flex-end;">
+      <button class="btn" id="cookie-decline" data-i18n="cookie.decline">Nur notwendige</button>
+      <button class="btn primary" id="cookie-accept" data-i18n="cookie.accept">Alle akzeptieren</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

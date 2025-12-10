@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Datenschutz / Privacy Policy – Ouya Sphere</title>
+  <meta name="description" content="Unternehmensberatun, Strategie & Operations – Consulting mit messbaren Ergebnissen. " />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="/datenschutz.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ouya Sphere" />
+  <meta property="og:description" content="Management Consulting • Strategy • Operations" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .i18n { display: block; }
+    .i18n-en { display: none; }
+    html[data-lang="en"] .i18n-de, body[data-lang="en"] .i18n-de { display: none; }
+    html[data-lang="en"] .i18n-en, body[data-lang="en"] .i18n-en { display: block; }
+    html[data-lang="de"] .i18n-de, body[data-lang="de"] .i18n-de { display: block; }
+    html[data-lang="de"] .i18n-en, body[data-lang="de"] .i18n-en { display: none; }
+    .legal-page h1 { margin-bottom: .6em; }
+    .legal-page h2 { margin-top: 1.4em; margin-bottom: .5em; }
+  </style>
+</head>
+<body>
+  <div id="progress"></div>
+
+  <!-- HEADER wie index.html -->
+  <header id="topbar">
+    <div class="container nav">
+      <a href="/#home" class="logo" aria-label="Startseite">
+        <img src="logo.png" alt="Ouya Sphere – Logo" loading="eager" />
+      </a>
+      <nav class="links" aria-label="Main navigation">
+        <button class="hamburger" id="menu-toggle" aria-label="Menü" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <a class="nav-link" href="/#home" data-i18n="nav.home">Start</a>
+        <a class="nav-link" href="/#services" data-i18n="nav.services">Leistungen</a>
+        <a class="nav-link" href="/#about" data-i18n="nav.about">Über uns</a>
+        <a class="nav-link" href="/#contact" data-i18n="nav.contact">Kontakt</a>
+        <div class="indicator" id="indicator"></div>
+
+        <div class="lang-dropdown" id="lang-dropdown">
+          <button class="lang-toggle" id="lang-toggle" aria-label="Sprache auswählen">
+            <span id="current-flag"></span>
+          </button>
+          <div class="dropdown-content" id="lang-dropdown-content">
+            <a href="#" data-lang="de" class="lang-option">
+              <span class="flag-icon flag-icon-de"></span> DE
+            </a>
+            <a href="#" data-lang="en" class="lang-option">
+              <span class="flag-icon flag-icon-gb"></span> EN
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menü + Backdrop -->
+  <div class="menu-backdrop" id="menu-backdrop"></div>
+  <nav id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <ul>
+      <li><a href="/#home" data-i18n="nav.home">Start</a></li>
+      <li><a href="/#services" data-i18n="nav.services">Leistungen</a></li>
+      <li><a href="/#about" data-i18n="nav.about">Über uns</a></li>
+      <li><a href="/#contact" data-i18n="nav.contact">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="section legal-page">
+      <div class="container">
+        <h1 data-i18n="privacy.title">Datenschutzerklärung</h1>
+
+        <h2 data-i18n="privacy.controller">I. Verantwortlicher</h2>
+        <p>
+          OUYA SPHERE GmbH<br />
+          Beethovenstr. 19, 85080 Gaimersheim, <span data-i18n='legal.country'>Deutschland</span><br />
+          <span data-i18n="legal.common.phone">Telefon</span>: +49 8458 3886099<br />
+          <span data-i18n="legal.common.email">E-Mail</span>:
+          <a href="mailto:info@ouya-sphere.de">info@ouya-sphere.de</a>
+        </p>
+
+        <h2 data-i18n="privacy.rights">II. Rechte der Betroffenen</h2>
+        <p data-i18n="privacy.rights.text">Rechte auf Auskunft ...</p>
+
+        <h2 data-i18n="privacy.general">III. Allgemeines zur Datenverarbeitung</h2>
+        <p data-i18n="privacy.general.text">Wir verarbeiten personenbezogene Daten ...</p>
+
+        <h2 data-i18n="privacy.logs">IV. Server-Logfiles</h2>
+        <p data-i18n="privacy.logs.text">Beim Aufruf werden technische Daten ...</p>
+
+        <h2 data-i18n="privacy.cookies">V. Cookies & Einwilligungsverwaltung</h2>
+        <p data-i18n="privacy.cookies.text">Technisch notwendige Cookies ...</p>
+
+        <h2 data-i18n="privacy.contact">VI. Kontaktaufnahme per E-Mail / Formular</h2>
+        <p data-i18n="privacy.contact.text">Ihre Angaben werden ...</p>
+
+        <h2 data-i18n="privacy.newsletter">VII. Newsletter (falls angeboten)</h2>
+        <p data-i18n="privacy.newsletter.text">Bei Anmeldung verarbeiten ...</p>
+
+        <h2 data-i18n="privacy.embeds">VIII. Eingebundene Inhalte & Drittanbieter</h2>
+        <p data-i18n="privacy.embeds.text">Externe Links/Buttons ...</p>
+        <ul>
+          <li>LinkedIn — <em>Privacy:</em> https://www.linkedin.com/legal/privacy-policy</li>
+          <li>Instagram — <em>Privacy:</em> https://privacycenter.instagram.com/policy</li>
+        </ul>
+
+        <h2 data-i18n="privacy.processing">IX. Auftragsverarbeitung / Hosting</h2>
+        <p data-i18n="privacy.processing.text">Einsatz von Dienstleistern ...</p>
+
+        <h2 data-i18n="privacy.security">X. Datensicherheit</h2>
+        <p data-i18n="privacy.security.text">Wir setzen technische und organisatorische Maßnahmen ...</p>
+
+        <h2 data-i18n="privacy.update">XI. Aktualität</h2>
+        <p>
+          <span data-i18n="privacy.update.text">Diese Datenschutzerklärung wird bei Bedarf angepasst.</span>
+          <br /><strong><span data-i18n="privacy.lastUpdated">Stand</span>:</strong> 31.11.2025
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER wie index.html -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container footer-top-grid">
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <span class="icon" data-src="icons/mail.png" aria-hidden="true"></span>
+              <div><a href="mailto:info@ouya-sphere.de">info@ouya-sphere.de</a></div>
+            </div>
+            <div class="contact-item">
+              <span class="icon" data-src="icons/phone.png" aria-hidden="true"></span>
+              <div><a href="tel:+4984583886099">+49 8458 3886099</a></div>
+            </div>
+            <div class="contact-item">
+              <span class="icon" data-src="icons/map.png" aria-hidden="true"></span>
+              <div><address>Beethovenstr. 19, 85080 Gaimersheim, Deutschland</address></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Weiterführende Links</h4>
+          <div class="social-links">
+            <a class="social" href="https://www.linkedin.com/company/ouya-sphere" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <span class="icon" data-src="icons/linkedin.svg" data-w="16" data-h="16" aria-hidden="true"></span>
+              <span>LinkedIn</span>
+            </a>
+            <a class="social" href="https://www.instagram.com/ouyasphere" target="_blank" rel="noopener" aria-label="Instagram">
+              <span class="icon" data-src="icons/instagram.svg" data-w="16" data-h="16" aria-hidden="true"></span>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Keywords</h4>
+          <ul class="keyword-tags">
+            <li>Management Consulting</li>
+            <li>Strategy</li>
+            <li>Operations</li>
+            <li>Supply Chain</li>
+            <li>Sales & Distribution</li>
+            <li>Pricing</li>
+            <li>CRM</li>
+            <li>M&A Advisory</li>
+            <li>Due Diligence</li>
+            <li>Restructuring</li>
+            <li>Succession</li>
+            <li>Operating Model</li>
+            <li>Process Optimization</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-row">
+        <div class="copyright">© <span id="year"></span> Ouya Sphere</div>
+        <nav class="legal-links" aria-label="Rechtliches">
+          <a href="/impressum.html">Impressum</a>
+          <a href="/datenschutz.html">Datenschutzhinweise</a>
+          <a href="/cookies.html">Cookie-Richtlinien</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie-Banner wie index.html -->
+  <div class="cookie-backdrop" id="cookie-backdrop"></div>
+  <div class="cookie" id="cookie" role="dialog" aria-modal="true" aria-labelledby="ck-title">
+    <h3 id="ck-title" data-i18n="cookie.title">Cookies & Datenschutz</h3>
+    <p data-i18n="cookie.desc">
+      Wir verwenden Cookies, um unsere Website sicher zu betreiben und – mit Ihrer Einwilligung – zur Reichweitenmessung.
+      Sie können Ihre Auswahl jederzeit ändern.
+    </p>
+    <div class="options">
+      <div class="opt">
+        <div>
+          <strong data-i18n="cookie.necessary">Technisch erforderlich</strong>
+          <div class="subtle" data-i18n="cookie.necessarySub">
+            immer aktiv – z. B. Sicherheits- und Session-Cookies
+          </div>
+        </div>
+        <input type="checkbox" checked disabled />
+      </div>
+      <div class="opt">
+        <div>
+          <strong>Analytics</strong>
+          <div class="subtle" data-i18n="cookie.analyticsSub">
+            anonyme Nutzungsstatistiken (optional)
+          </div>
+        </div>
+        <input id="ck-analytics" type="checkbox" />
+      </div>
+    </div>
+    <div style="display:flex; gap:.5rem; justify-content:flex-end;">
+      <button class="btn" id="cookie-decline" data-i18n="cookie.decline">Nur notwendige</button>
+      <button class="btn primary" id="cookie-accept" data-i18n="cookie.accept">Alle akzeptieren</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
