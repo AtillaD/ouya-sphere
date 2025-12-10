@@ -51,10 +51,20 @@
       line-height:1.6;
 
       /* Globales, fixes Hintergrundbild für alle Abschnitte */
-      background: url("Background.png") center/cover fixed no-repeat;
+      background: var(--bg);
 
       overflow-x:hidden;
-  padding-top:var(--header-h);
+      padding-top:var(--header-h);
+      position: relative; /* wichtig für das ::before-Layer */
+    }
+    /* Globales fixes Hintergrundbild – funktioniert besser auf Mobile */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0; /* top:0; right:0; bottom:0; left:0; */
+      background: url("Background.png") center/cover no-repeat;
+      z-index: -1;          /* hinter allem Inhalt */
+      pointer-events: none; /* klickt nicht „dazwischen“ */
     }
     .container{width:min(1100px,92vw);margin:0 auto}
     a{color:var(--brand-2);text-decoration:none} a:hover{text-decoration:underline}
