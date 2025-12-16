@@ -72,7 +72,7 @@
     "form.placeholder.name": "Vor- und Nachname",
     "form.placeholder.email": "name@unternehmen.de",
     "form.placeholder.company": "Unternehmen (optional)",
-    "form.placeholder.message": "Wie können wir helfen?",
+    "form.placeholder.message": "Beschreiben Sie kurz Ihr Ziel (Strategie, Tier-1-/OEM-Zugang, Lieferkette, Aftermarket, Engineering, M&A) – wir antworten Ihnen mit einem maßgeschneiderten Ansatz und den nächsten Schritten.",
           
     //Footer
     "footer.contact.title": "Kontakt",
@@ -173,7 +173,7 @@
     "form.placeholder.name": "First and last name",
     "form.placeholder.email": "name@company.com",
     "form.placeholder.company": "Company (optional)",
-    "form.placeholder.message": "How can we help?",
+    "form.placeholder.message": "Briefly outline your objective (Strategy, Tier-1/OEM access, Supply Chain, Aftermarket, Engineering, M&A) — we’ll respond with a tailored approach and next steps.",
           
     //Footer
     "footer.contact.title": "Contact",

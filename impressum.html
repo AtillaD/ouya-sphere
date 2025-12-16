@@ -102,8 +102,8 @@
         <h2 data-i18n="legal.register">Registereintrag</h2>
         <p>
           <span data-i18n="legal.register.details">Eintragung im Handelsregister.</span><br />
-          <span data-i18n="legal.register.court">Registergericht</span>: [[Amtsgericht …]]<br />
-          <span data-i18n="legal.register.number">Registernummer</span>: [[HRB …]]
+          <span data-i18n="legal.register.court">Registergericht</span>: Ingolstadt<br />
+          <span data-i18n="legal.register.number">Registernummer</span>: HRB 12657
         </p>
 
         <h2 data-i18n="legal.vat">Umsatzsteuer</h2>
@@ -131,12 +131,12 @@
     </section>
   </main>
 
-  <!-- FOOTER wie index.html -->
+  <!-- FOOTER bleibt wie gehabt -->
   <footer class="footer">
     <div class="footer-top">
       <div class="container footer-top-grid">
         <div class="footer-col">
-          <h4>Kontakt</h4>
+          <h4 data-i18n="footer.contact.title">Kontakt</h4>
           <div class="footer-contact-info">
             <div class="contact-item">
               <span class="icon" data-src="icons/mail.png" aria-hidden="true"></span>
@@ -154,7 +154,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Weiterführende Links</h4>
+          <h4 data-i18n="footer.links.title">Weiterführende Links</h4>
           <div class="social-links">
             <a class="social" href="https://www.linkedin.com/company/ouya-sphere" target="_blank" rel="noopener" aria-label="LinkedIn">
               <span class="icon" data-src="icons/linkedin.svg" data-w="16" data-h="16" aria-hidden="true"></span>
@@ -168,7 +168,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Keywords</h4>
+          <h4 data-i18n="footer.keywords.title">Keywords</h4>
           <ul class="keyword-tags">
             <li>Management Consulting</li>
             <li>Strategy</li>
@@ -185,22 +185,24 @@
             <li>Process Optimization</li>
           </ul>
         </div>
+
       </div>
     </div>
 
     <div class="footer-bottom">
       <div class="container footer-bottom-row">
-        <div class="copyright">© <span id="year"></span> Ouya Sphere</div>
+        <div class="copyright">
+          © <span id="year"></span> Ouya Sphere
+        </div>
         <nav class="legal-links" aria-label="Rechtliches">
-          <a href="/impressum.html">Impressum</a>
-          <a href="/datenschutz.html">Datenschutzhinweise</a>
-          <a href="/cookies.html">Cookie-Richtlinien</a>
+          <a href="/impressum.html" data-i18n="footer.legal.imprint">Impressum</a>
+          <a href="/datenschutz.html" data-i18n="footer.legal.privacy">Datenschutzhinweise</a>
+          <a href="/cookies.html" data-i18n="footer.legal.cookies">Cookie-Richtlinien</a>
         </nav>
       </div>
     </div>
   </footer>
 
-  <!-- Cookie-Banner wie index.html -->
   <div class="cookie-backdrop" id="cookie-backdrop"></div>
   <div class="cookie" id="cookie" role="dialog" aria-modal="true" aria-labelledby="ck-title">
     <h3 id="ck-title" data-i18n="cookie.title">Cookies & Datenschutz</h3>
@@ -220,7 +222,7 @@
       </div>
       <div class="opt">
         <div>
-          <strong>Analytics</strong>
+          <strong data-i18n="cookie.analytics">Analytics</strong>
           <div class="subtle" data-i18n="cookie.analyticsSub">
             anonyme Nutzungsstatistiken (optional)
           </div>
