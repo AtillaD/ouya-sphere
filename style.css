@@ -463,16 +463,28 @@ main > section:nth-of-type(even){ background: transparent; }
 }
 
 @media (max-width: 700px) {
-  .feature-item {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 10px;
+  .feature-item{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
   }
-  .feature-item .icon {
-    margin-bottom: 0;
-    margin-right: 6px;
+
+  .feature-item .icon{
+    margin: 0 0 6px 0;
+  }
+
+  .feature-item h4{
+    margin: 0;
+    text-align: center;
+  }
+
+  .feature-item p{
+    margin: 0;
+    text-align: center;
   }
 }
+
 
 /* Section-Titel */
 .section-title {
@@ -1242,15 +1254,57 @@ button[type="submit"]:hover{
   .footer-bottom .legal-links{ margin-left:0; }
 }
 
-/* HERO feature icons: premium sizing + no forced stroke */
-.feature-item .icon svg.hero-icon {
-  width: 18px;
-  height: 18px;
+/* Bigger hero feature badges + clearer icons */
+.feature-item .icon{
+  width: 60px;          /* was 32px */
+  height: 60px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+/* Make the icon itself bigger */
+.feature-item .icon svg{
+  width: 50px;          /* was ~18-22px */
+  height: 50px;
   display: block;
 }
 
-.feature-item .icon svg.hero-icon,
-.feature-item .icon svg.hero-icon * {
-  stroke: none !important;
-  fill: currentColor !important;
+/* keep your bold outline style */
+.feature-item .icon svg,
+.feature-item .icon svg *{
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 1.4 !important;
+  vector-effect: non-scaling-stroke; /* keep line weight stable */
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
 }
+.feature-item .icon svg{
+  shape-rendering: geometricPrecision;
+}
+.feature-item .icon img{
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Mobile: center icon + headline inside feature cards */
+@media (max-width: 600px) {
+  .feature-item{
+    grid-template-columns: 1fr;   /* stack */
+    text-align: center;
+    justify-items: center;
+  }
+
+  .feature-item .icon{
+    margin: 0 auto 10px auto;     /* center icon */
+  }
+
+  .feature-item h3{
+    margin: 0 auto 10px auto;
+    text-align: center;
+  }
+}
+

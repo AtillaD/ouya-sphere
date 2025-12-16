@@ -764,3 +764,4 @@ if ('IntersectionObserver' in window) {
       // Icons inline laden (nicht blockierend)
       try{ inlineSVGIcons(); }catch(e){ console.error('inline SVG failed', e); }
     });
+        
